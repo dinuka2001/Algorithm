@@ -13,7 +13,7 @@ char *LCS_iterative(char str1[], char str2[])
 
     int mattrix[m + 1][n + 1];
     int direction_mattrix[m + 1][n + 1];
-    
+
     // initialize mattrix and direction_mattrix with 0
     for (int i = 0; i <= m; i++)
     {
@@ -84,8 +84,14 @@ int main()
     char str1[] = "AGGTAB";
     char str2[] = "GXTXAYB";
 
+    // take input from user
+    printf("Enter the first string: ");
+    scanf("%s", str1);
+    printf("Enter the second string: ");
+    scanf("%s", str2);
+
     char *lcs_string = LCS_iterative(str1, str2);
-    printf("Longest common subsequence is %s\n", lcs_string);
+    printf("Longest common subsequence is:  %s\n", lcs_string);
 
     return 0;
 }
